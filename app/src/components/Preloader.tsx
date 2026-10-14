@@ -59,6 +59,7 @@ export default function Preloader({ ready, onComplete }: PreloaderProps) {
       onComplete: () => {
         if (ready && !doneRef.current) {
           doneRef.current = true;
+          // eslint-disable-next-line react-hooks/immutability
           exit();
         }
       },
@@ -84,6 +85,7 @@ export default function Preloader({ ready, onComplete }: PreloaderProps) {
       });
   }
 
+  // eslint-disable-next-line react-hooks/refs
   if (reduced.current) return null;
 
   const c = 2 * Math.PI * 54;

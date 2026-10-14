@@ -69,6 +69,7 @@ export default function Nav() {
       ease: "power3.in",
       onComplete: () => gsap.set(el, { display: "none" }),
     });
+    // eslint-disable-next-line react-hooks/immutability
     document.body.style.overflow = "";
     setOpen(false);
   };
