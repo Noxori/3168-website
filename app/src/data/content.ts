@@ -114,9 +114,36 @@ export interface Product {
   image: string;
   alt: string;
   edition: string;
+  category: "Tees" | "Hoodies" | "Headwear" | "Vinyl";
+  collection: "Gold Line" | "Tag Line";
+  badge?: "LTD" | "NEW";
 }
 
 export const PRODUCTS: Product[] = [
+  {
+    id: "tag-tee-black",
+    name: "Tag Tee — Black",
+    price: "$45",
+    detail: "Heavyweight 240gsm cotton, red tag print across the chest.",
+    image: "/images/merch-tag-tee-black.jpg",
+    alt: "Black t-shirt with the red 3168 tag logo across the chest",
+    edition: "Open edition",
+    category: "Tees",
+    collection: "Tag Line",
+    badge: "NEW",
+  },
+  {
+    id: "tag-tee-white",
+    name: "Tag Tee — White",
+    price: "$45",
+    detail: "Heavyweight 240gsm cotton, red tag print across the chest.",
+    image: "/images/merch-tag-tee-white.jpg",
+    alt: "White t-shirt with the red 3168 tag logo across the chest",
+    edition: "Open edition",
+    category: "Tees",
+    collection: "Tag Line",
+    badge: "NEW",
+  },
   {
     id: "hoodie",
     name: "3168 Gold Logo Hoodie",
@@ -125,15 +152,31 @@ export const PRODUCTS: Product[] = [
     image: "/images/merch-hoodie.jpg",
     alt: "Black hoodie with a small gold embroidered 3168 logo on the chest",
     edition: "Edition of 300",
+    category: "Hoodies",
+    collection: "Gold Line",
   },
   {
-    id: "cap",
-    name: "3168 Snapback",
-    price: "$95",
-    detail: "Structured six-panel in midnight black wool. Gold emblem, red under-visor stitch — the detail only you know is there.",
-    image: "/images/merch-cap.jpg",
-    alt: "Black snapback cap with a gold embroidered 3168 emblem",
+    id: "tag-cap",
+    name: "Tag 5-Panel Cap",
+    price: "$40",
+    detail: "Black five-panel snapback with the red embroidered tag on the front.",
+    image: "/images/merch-tag-cap.jpg",
+    alt: "Black five-panel cap with the red 3168 tag logo embroidered on the front",
+    edition: "Open edition",
+    category: "Headwear",
+    collection: "Tag Line",
+  },
+  {
+    id: "sampler-lp",
+    name: "3168 Sampler LP",
+    price: "$32",
+    detail: "12\" black vinyl in a tag sleeve. Limited to 500.",
+    image: "/images/merch-sampler-lp.jpg",
+    alt: "White record sleeve with the red 3168 tag logo and a black vinyl record beside it",
     edition: "Edition of 500",
+    category: "Vinyl",
+    collection: "Tag Line",
+    badge: "LTD",
   },
   {
     id: "tee",
@@ -143,6 +186,19 @@ export const PRODUCTS: Product[] = [
     image: "/images/merch-tee.jpg",
     alt: "Black oversized t-shirt with a gold 3168 print and red underline",
     edition: "Edition of 500",
+    category: "Tees",
+    collection: "Gold Line",
+  },
+  {
+    id: "cap",
+    name: "3168 Snapback",
+    price: "$95",
+    detail: "Structured six-panel in midnight black wool. Gold emblem, red under-visor stitch — the detail only you know is there.",
+    image: "/images/merch-cap.jpg",
+    alt: "Black snapback cap with a gold embroidered 3168 emblem",
+    edition: "Edition of 500",
+    category: "Headwear",
+    collection: "Gold Line",
   },
   {
     id: "vinyl",
@@ -152,6 +208,9 @@ export const PRODUCTS: Product[] = [
     image: "/images/merch-vinyl.jpg",
     alt: "Black vinyl record with a gold 3168 center label under dramatic lighting",
     edition: "Edition of 1,000",
+    category: "Vinyl",
+    collection: "Gold Line",
+    badge: "LTD",
   },
 ];
 

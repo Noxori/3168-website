@@ -1,11 +1,11 @@
 import PageShell from "@/components/PageShell";
-import Merch from "@/sections/Merch";
+import MerchStore from "@/sections/MerchStore";
 
 export default function MerchPage() {
   return (
     <PageShell title="Merch">
       <div className="page-enter">
-        <Merch />
+        <MerchStore />
       </div>
     </PageShell>
   );
