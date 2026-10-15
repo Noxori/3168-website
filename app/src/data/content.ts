@@ -65,6 +65,7 @@ export interface Release {
   year: string;
   image: string;
   alt: string;
+  audio?: string;
 }
 
 export const RELEASES: Release[] = [
@@ -97,6 +98,7 @@ export const RELEASES: Release[] = [
   },
   {
     id: "redline",
+    audio: "/audio/otf-mastered.mp3",
     title: "REDLINE",
     artist: "KID MARROW",
     type: "Single",

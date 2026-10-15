@@ -1,6 +1,7 @@
 import { RELEASES } from "@/data/content";
 import Marquee from "@/components/Marquee";
 import Reveal, { MaskTitle, SectionTag } from "@/components/Reveal";
+import PlayButton from "@/components/PlayButton";
 
 export default function Releases() {
   return (
@@ -49,6 +50,11 @@ export default function Releases() {
                     loading="lazy"
                     className="aspect-square w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
+                  {release.audio ? (
+                    <div className="absolute bottom-4 left-4 rounded-full bg-black/60">
+                      <PlayButton src={release.audio} label={`${release.title} by ${release.artist}`} />
+                    </div>
+                  ) : (
                   <div className="absolute inset-0 flex items-center justify-center bg-black/55 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                     <span className="flex h-16 w-16 items-center justify-center rounded-full border border-gold">
                       <svg width="18" height="20" viewBox="0 0 18 20" fill="none" aria-hidden="true">
@@ -57,6 +63,7 @@ export default function Releases() {
                       <span className="sr-only">Play preview</span>
                     </span>
                   </div>
+                  )}
                 </div>
                 <div className="flex flex-1 flex-col p-5">
                   <div className="flex items-baseline justify-between">
